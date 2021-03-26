@@ -26,7 +26,7 @@ class Controller extends BaseController
 
     public function getData()
     {
-        $users = User::all();
+        $users = User::all()->toArray();
 
         if($users){
             return redirect()->back()->with('users', $users);
